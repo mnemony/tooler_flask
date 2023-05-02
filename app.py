@@ -112,5 +112,4 @@ def temperatureConverter():
     metaData = "konwerter temperatur, kalkulator temperatur, przelicznik temperatur, Kelvin, Rankine, Farenheit, Celcjusz"
     return render_template('temperature_temp.html', title = title, metaKeys = metaKeys,metaData =metaData)
 
-if __name__ == '__main__': 
-     app.run()
+
