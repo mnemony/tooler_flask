@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Odwróć kolejność tekstu</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'reverse_text.png')}}" alt="odwracanie tekstu, zmień kolejność">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            W tworzeniu stron internetowych i programowaniu  czasami trzeba odwrócić ciąg znaków. Typ string to uporządkowana sekwencja danych, często składająca się ze znaków, używana w branży informatycznej.            
+            <br><br>
+            Wprowadź tekst, w którym chcesz odwrócić kolejność
+          </div>
+        <br>
+        <br>
+        <textarea rows="15" type="text" class="form-control"  id="reverseStart" placeholder="wprowadź tekst" aria-label="Test" aria-describedby="basic-addon2" ></textarea>
+        <br>
+        <button type="button" class="btn btn-primary"  onclick="reverseString()" >Konwertuj tekst</button>
+        <br>
+        <br>
+        <textarea rows="15" type="text" class="form-control"  id="reverseEnd" placeholder="" aria-label="Test" aria-describedby="basic-addon2" ></textarea>
+        <br>
+        
+        
+        <br>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}

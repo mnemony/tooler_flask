@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+<br>
+
+<div class="row">
+
+    <div class="col"></div>
+    <div class="col-10">
+        <h1>Bezpłatne narzędzia online</h1>
+        <br>
+        <br>
+        <div>
+            <div class=" alert alert-secondary" role="alert">
+
+                
+                Na tej stronie znajdziesz bezpłatne narzędzia online do wykonywania typowych operacji na tekście, takich jak odwracanie tekstu, obliczanie długości tekstu, liczby słów w tekście.
+                Dla programistów i testerów stworzyliśmy generatory danych testowych, takich jak numer PESEL, numer REGON, numer konta bankowego IBAN i inne.
+                Poza tym oferujemy inne narzędzia, zestawienia informacji i kalkulatory.
+                
+
+            </div>
+            <br>
+            <br>
+            <div class="alert alert-secondary" role="alert">
+                Zapewniamy łatwe w użyciu narzędzia do manipulacji online, które pomagają szybko obsłużyć dużą ilość tekstu. 
+                Ta witryna zawiera narzędzia, które są proste i bezpłatne w użyciu. Zaprojektowaliśmy tę stronę z myślą o Tobie! 
+                Wszystko, co tu stworzono, ma na celu oszczędność  Twojego czasu. 
+            </div>
+        </div>    
+        <br>    
+        <div class="accordion" id="accordionExample">
+            
+            <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Narzedzia dla IT
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="{{ url_for('osobaTestowa') }}">Generator danych osobowych do testów</a></li>
+                    <li class="list-group-item"><a href="{{ url_for('pesel') }}">Geneator numerów PESEL</a></li>
+                    <li class="list-group-item"><a href="{{ url_for('regon') }}">Generator numeru REGON</a></li>
+                    <li class="list-group-item"><a href="{{ url_for('numberIBAN') }}">Generator numeru IBAN</a></li>
+                    <li class="list-group-item"><a href="{{ url_for('numberNIP') }}">Generator numeru NIP</a></li>
+                    <li class="list-group-item"><a href="{{ url_for('numberNDO') }}">Generator numeru dowodu osobistego</a></li>
+                    <li class="list-group-item"><a href="{{ url_for('walidacjaPESEL') }}">Sprawdzenie numeru PESEL i daty urodzenia</a></li>
+
+                </ul>
+                </div>
+            </div>
+            </div>
+            <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Funkcje tekstowe
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="{{ url_for('maleNaWielkie') }}">Tekst na małe litery / odwróć Capslock</a></li>
+                        <li class="list-group-item"><a href="{{ url_for('wielkieNaMale') }}">Tekst na wielkie litery / włącz Capslock</a></li>
+                        <li class="list-group-item"><a href="{{ url_for('liczbaZnakow') }}">Policz litery w tekście</a></li>
+                        <li class="list-group-item"><a href="{{ url_for('liczbaSlow') }}">Policz słowa w tekście</a></li>
+                        <li class="list-group-item"><a href="{{ url_for('odwrocTekst') }}">Odwróć kolejność tekstu</a></li>
+                        <li class="list-group-item"><a href="{{ url_for('tekstNa16') }}">Konwersja tekstu na typ szesnastkowy</a></li>
+    
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Kalkulatory 
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="{{ url_for('temperatureConverter') }}">Przelicznik temperatur na Celcjusza, Farenheita,Kelvina i Rankine’a</a></li>
+                        
+    
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <br>
+    </div>
+    <div class="col"></div>    
+</div>
+{% endblock %}

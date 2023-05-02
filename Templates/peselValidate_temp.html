@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Sprawdź numer PESEL, płeć i datę urodzenia</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'numer_PESEL_generator.png')}}" alt="Sprawdź numer PESEL poprawność płeć data urodzenia">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            Numer PESEL to jedenastocyfrowy, unikatowy symbol numeryczny, który pozwala na łatwą identyfikację osoby fizycznej. Numer PESEL zawiera datę urodzenia, numer porządkowy, oznaczenie płci oraz liczbę kontrolną.            
+            <br><br>
+            Sprawdź czy numer PESEL jest poprawny.
+          </div>
+        <br>
+        <br>
+        <input type="text" class="form-control"  id="peselToValidate" placeholder="wprowadź numer PESEL" aria-label="Test" aria-describedby="basic-addon2" >
+        <br>
+        <button type="button" class="btn btn-primary"  onclick="checkPESEL()" >Sprawdź PESEL</button>
+        <br>
+        <br>
+        <h6 class="text-success" id="succesPesel">Numer PESEL jest poprawny</h6>
+        <br>
+        <label for="dateFromPesel" class="form-label">Data urodzenia</label>
+        <input type="text" class="form-control"  id="dateFromPesel" placeholder="" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <br>
+        <label for="sexFromPesel" class="form-label">Płeć</label>
+        <input type="text" class="form-control"  id="sexFromPesel" placeholder="" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        
+        <br>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}

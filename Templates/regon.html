@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Generator numeru REGON</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'numer_REGON_generator.png')}}" alt="Generator numeru REGON">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            Niepowtarzalny numer nadawany podmiotom gospodarki narodowej i jednostkom lokalnym tych podmiotów w krajowym rejestrze urzędowym podmiotów gospodarki narodowej REGON, bez ukrytego lub jawnego charakteru znaczącego, określającego cechy podmiotu.
+          </div>
+        <button type="button" class="btn btn-primary"  onclick="generateManyREGON()" >Generuj Numery REGON</button>
+        <br>
+        <br>
+        <input type="text" class="form-control"  id="REGON1" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="REGON2" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="REGON3" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="REGON4" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="REGON5" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}

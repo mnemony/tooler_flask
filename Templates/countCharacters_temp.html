@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Policz znaki w tekście</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'licznik_tekstu.png')}}" alt="policz litery cyfry w tekście">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            Oblicz długość ciągu tekstu lub liczb, aby sprawdzić liczbę znaków, które zawiera! Korzystanie z naszego internetowego narzędzia do liczenia znaków jest szybkie i łatwe! To narzędzie jest idealne dla programistów, twórców stron internetowych, pisarzy i innych twórców. Program zwraca informacje o całkowitej ilości znaków, oraz z pominięciem spacji i innych białych znaków.            
+            <br><br>
+            Wprowadź tekst i policz litery
+          </div>
+        <br>
+        <br>
+        <textarea rows="15" type="text" class="form-control"  id="countTextArea" placeholder="wprowadź tekst" aria-label="Test" aria-describedby="basic-addon2" ></textarea>
+        <br>
+        <button type="button" class="btn btn-primary"  onclick="countLetters()" >Policz znaki</button>
+        <br>
+        <br>
+        <h6 class="text-success" id="countTotal"></h6>
+        <br>
+        <h6 class="text-success" id="countNoSpaces"></h6>
+
+        <br>
+        
+        
+        <br>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}

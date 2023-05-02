@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Przelicznik temperatur</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'temperatura_skale_przelicz.png')}}" alt="Temperatura stopenie kelvina farenheita Celcjusza Rankine’a przelicznik konwerter kalkulator">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            Celsjusz, Kelvin, Fahrenheit i Rankine to cztery najpopularniejsze skale temperatur, które są używane na całym świecie. Skala Celsjusza jest skalą metryczną, która określa temperaturę w stopniach Celsiusza, a jej punktem zerowym jest temperatura topnienia lodu. Skala Kelvina to skala absolutna, gdzie zero Kelvina odpowiada całkowitemu brakowi ruchu cząsteczek. Skala Fahrenheita jest skalą stosowaną w Stanach Zjednoczonych i kilku innych krajach, a jej punktem zerowym jest uważany za temperaturę zamarzania solanki. Skala Rankine'a jest skalą absolutną stosowaną głównie w USA, która opiera się na skali Fahrenheita i jej punkt zerowy odpowiada bezruchowi cząsteczek.
+            <br>
+            <br>
+            Wprowadź wartość do jednego z pól i przelicz na inne skale temperatur
+            <br>
+        </div>
+        
+        <br>
+        <h6 class="text-warning" id="invalidTemperature">Temperatura nie może być poniżej zera absolutnego</h6>
+        <div class="row align-items-center" >
+            <div class=" col-10">
+                <label for="valueCelsius" class="form-label">Celcjusz</label>
+                <input type="number" class="form-control" min="-273,15"  id="valueCelsius" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" >
+            </div>
+            <div class="col-2">
+                <br>
+                <button type="button" class="btn btn-primary" style="margin-bottom: -2px;"  onclick="convertCel()" >Przelicz</button>
+            </div>
+        </div>
+        <br>
+        <div class="row align-items-center" >
+            <div class=" col-10">
+                <label for="valueCelsius" class="form-label">Farenheit</label>
+                <input type="number" class="form-control" min="-459,67" id="valueFarenheit" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" >
+            </div>
+            <div class="col-2">
+                <br>
+                <button type="button" class="btn btn-primary" style="margin-bottom: -2px;"  onclick="convertFar()" >Przelicz</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row align-items-center" >
+            <div class=" col-10">
+                <label for="valueCelsius" class="form-label">Kelvin</label>
+                <input type="number" class="form-control" min="0" id="valueKelvin" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" >
+            </div>
+            <div class="col-2">
+                <br>
+                <button type="button" class="btn btn-primary" style="margin-bottom: -2px;"  onclick="convertKel()" >Przelicz</button>
+            </div>
+        </div>
+        <br>
+        <div class="row align-items-center" >
+            <div class=" col-10">
+                <label for="valueCelsius" class="form-label">Rankine</label>
+                <input type="number" class="form-control" min="0"  id="valueRankine" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" >
+            </div>
+            <div class="col-2">
+                <br>
+                <button type="button" class="btn btn-primary" style="margin-bottom: -2px;"  onclick="convertRan()" >Przelicz</button>
+            </div>
+        </div>
+        
+        
+        <br>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}

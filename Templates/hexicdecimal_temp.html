@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Tekst na typ szesnastkowy</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'typ_szesnastkowy.png')}}" alt="zamień na typ szesnastkowy">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            Notacja szesnastkowa jest używana jako przyjazna dla człowieka reprezentacja wartości binarnych w programowaniu  i elektronice cyfrowej. Większość języków programowania, takich jak Java, ASP.NET, C++ itp., ma wbudowane funkcje, które konwertują do  formatu szesnastkowego.            <br><br>
+            Wprowadź tekst, w który chcesz zamienić na typ szesnastkowy
+          </div>
+        <br>
+        <br>
+        <textarea rows="15" type="text" class="form-control"  id="textToHexStart" placeholder="wprowadź tekst" aria-label="Test" aria-describedby="basic-addon2" ></textarea>
+        <br>
+        <button type="button" class="btn btn-primary"  onclick="textToHex()" >Konwertuj tekst</button>
+        <br>
+        <br>
+        <textarea rows="15" type="text" class="form-control"  id="textToHexEnd" placeholder="" aria-label="Test" aria-describedby="basic-addon2" ></textarea>
+        <br>
+        
+        
+        <br>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Generator numeru dowodu osobistego</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'numer_NDO_generator.png')}}" alt="Generator numeru dowodu osobistego">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            Seria i numer dowodu osobistego to dane pozwalające zidentyfikować dokument tożsamości składające się z ciągu trzech liter i sześciu cyfr cyfr. Służy do potwierdzenia prawdziwości dowodu osobistego. Kombinacja tych znaków powstaje na podstawie algorytmu przypisującego użytym literom odpowiednie wartości i przemnożenie mnożenie kolejnych elementów tak uzyskanego ciągu liczb przez ustalone wagi.
+            <br><br>
+            Skorzystaj z wygenerowanych numerów dowodów osobistych w celu testowania oprogramowania.
+          </div>
+        <button type="button" class="btn btn-primary"  onclick="generateManyIdCardNumber()" >Generuj Numery Dowodu Osobistego</button>
+        <br>
+        <br>
+        <input type="text" class="form-control"  id="NDO1" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="NDO2" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="NDO3" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="NDO4" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="NDO5" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}

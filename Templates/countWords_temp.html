@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Policz słowa w tekście</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'licznik_tekstu.png')}}" alt="policz słowa w tekście">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            Narzędzie do liczenia słów zostało zaprojektowane z myślą o użytkownikach, którzy stale piszą podczas dnia w pracy lub szkole. Niezależnie od tego, czy jesteś dziennikarzem, blogerem, licealistą czy studentem, narzędzie do liczenia słów ułatwi Tobie życie, śledząc liczbę słów w Twojej pracy. 
+            <br><br>
+            Wprowadź tekst i policz słowa
+          </div>
+        <br>
+        <br>
+        <textarea rows="15" type="text" class="form-control"  id="countWordsArea" placeholder="wprowadź tekst" aria-label="Test" aria-describedby="basic-addon2" ></textarea>
+        <br>
+        <button type="button" class="btn btn-primary"  onclick="countWords()" >Policz słowa</button>
+        <br>
+        <br>
+        <h6 class="text-success" id="counterWords"></h6>
+
+
+        <br>
+        
+        
+        <br>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}

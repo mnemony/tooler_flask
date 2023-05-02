@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Generator numeru IBAN</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'numer_IBAN_generator.png')}}" alt="Generator numeru IBAN konta bankowego">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            Międzynarodowy Numer Rachunku Bankowego (IBAN) to uzgodniony na szczeblu międzynarodowym system identyfikacji rachunków bankowych ponad granicami krajowymi w celu ułatwienia komunikacji i przetwarzania transakcji transgranicznych przy zmniejszonym ryzyku błędów w transkrypcji. 
+            IBAN jednoznacznie identyfikuje konto klienta w instytucji finansowej. Został pierwotnie przyjęty przez Europejski Komitet Standardów Bankowych (ECBS), a od 1997 roku jako międzynarodowy standard ISO 13616 w ramach Międzynarodowej Organizacji Normalizacyjnej (ISO). 
+            Obecna wersja to ISO 13616:2020, która wskazuje Towarzystwo Światowej Międzybankowej Telekomunikacji Finansowej (SWIFT) jako formalnego rejestratora. Początkowo opracowany w celu ułatwienia płatności w Unii Europejskiej, został wdrożony przez większość krajów europejskich i wiele krajów w innych częściach świata, głównie na Bliskim Wschodzie i na Karaibach. Według stanu na maj 2020 r. z systemu numeracji IBAN korzystało 77 krajów.
+            <br>
+            Skorzystaj z wygenerowanych numerów rachunku bankowego iBAN do celów testowanie oprogramowania.
+          </div>
+        <button type="button" class="btn btn-primary"  onclick="generateManyIBAN()" >Generuj Numery IBAN</button>
+        <br>
+        <br>
+        <input type="text" class="form-control"  id="IBAN1" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="IBAN2" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="IBAN3" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="IBAN4" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="IBAN5" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}

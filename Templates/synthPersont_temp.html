@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Dane osobowe do testów</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'osoba_testowa.png')}}" alt="Dane testowe osobowe losowe">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            Skorzystaj z wygenerowanych losowych danych osobowych do celów testowania oprogramowania.
+            <br>
+        </div>
+        <button type="button" class="btn btn-primary"  onclick="generateFakePerson()" >Generuj osobę fikcyjną do testów</button>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col">
+                <label for="fakeFirstName" class="form-label">Imię</label>
+                <input type="text" class="form-control"  id="fakeFirstName" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+            </div>
+            <div class="col">
+                <label for="fakeLastName" class="form-label">Nazwisko</label>
+                <input type="text" class="form-control"  id="fakeLastName" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <label for="fakePESEL" class="form-label">PESEL</label>
+                <input type="text" class="form-control"  id="fakePESEL" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+            </div>
+            <div class="col">
+                <label for="fakeDate" class="form-label">Data urodzenia</label>
+                <input type="text" class="form-control"  id="fakeDate" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col">
+                <label for="fakeNDO" class="form-label">Numer dowodu osobistego</label>
+                <input type="text" class="form-control"  id="fakeNDO" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+            </div>
+            <div class="col">
+                <label for="fakeEmail" class="form-label">Email</label>
+                <input type="text" class="form-control"  id="fakeEmail" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+            </div>
+        </div>
+        <br>
+        
+        <div class="row">
+            <div class="col">
+                <label for="fakeNIP" class="form-label">NIP</label>
+                <input type="text" class="form-control"  id="fakeNIP" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+            </div>
+            <div class="col">
+                <label for="fakeREGON" class="form-label">REGON</label>
+                <input type="text" class="form-control"  id="fakeREGON" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <label for="fakeIBAN" class="form-label">Numer IBAN</label>
+                <input type="text" class="form-control"  id="fakeIBAN" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+            </div>
+            <div class="col">
+                <label for="fakePhoneNumber" class="form-label">Numer telefonu</label>
+                <input type="text" class="form-control"  id="fakePhoneNumber" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+            </div>
+        </div>
+        
+        <br>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}

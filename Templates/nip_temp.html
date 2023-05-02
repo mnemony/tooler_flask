@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Generator numeru NIP</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'numer_NIP_generator.png')}}" alt="Generator numeru IBAN konta bankowego">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            NIP, czyli numer identyfikacji podatkowej, to identyfikator podatkowy, dzięki któremu służby skarbowe mogą jednoznacznie zidentyfikować podatnika. To dziesięciocyfrowy kod dedykowany osobom prowadzącym działalność gospodarczą. 
+            <br><br>
+            Skorzystaj z wygenerowanych numerów NIP do celów testowania oprogramowania.
+          </div>
+        <button type="button" class="btn btn-primary"  onclick="generateManyNIP()" >Generuj Numery NIP</button>
+        <br>
+        <br>
+        <input type="text" class="form-control"  id="NIP1" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="NIP2" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="NIP3" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="NIP4" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+        <input type="text" class="form-control"  id="NIP5" placeholder="Test" aria-label="Test" aria-describedby="basic-addon2" readonly>
+        <br>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}
