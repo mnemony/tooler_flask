@@ -118,3 +118,5 @@ def temperatureConverter():
     return render_template('temperature_temp.html', title = title, metaKeys = metaKeys,metaData =metaData)
 
 
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=5000)
