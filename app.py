@@ -1,7 +1,9 @@
-from flask import Flask, request, url_for, render_template
+from flask import Flask, request, url_for, render_template, send_from_directory
 
 
 app = Flask(__name__) 
+
+
 
 @app.route('/') 
 def index(): 
@@ -10,6 +12,9 @@ def index():
     metaKeys = "generatory danych , kalkulator online, generator iban, zmiana tekstu, dane testowe, generator pesel, konwerter online"
     return render_template('index.html', title = title, metaData = metaData, metaKeys = metaKeys)
 
+@app.route('/sitemap.xml')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
 
 @app.route('/generator_PESEL') 
 def pesel(): 
