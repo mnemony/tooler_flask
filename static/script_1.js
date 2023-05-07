@@ -242,6 +242,18 @@ function textToHex() {
   document.getElementById('textToHexEnd').value = hex
 }
 
+function tekstNaBinarny() {
+  let tekst = document.getElementById('textToBinaryStart').value
+  let wynik = '';
+  
+  for (let i = 0; i < tekst.length; i++) {
+    const znakBinarny = tekst[i].charCodeAt().toString(2);
+    wynik += znakBinarny.padStart(8, '0'); // Dodajemy zera do przodu, jeśli liczba binarna ma mniej niż 8 cyfr
+  }
+  
+  document.getElementById('textToBinaryEnd').value = wynik
+}
+
 function hexToText(hex) {
   let text = '';
   for (let i = 0; i < hex.length; i += 2) {

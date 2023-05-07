@@ -110,11 +110,18 @@ def tekstNa16():
     metaData = "tekst na hex, hex, tekst szesnastkowy"
     return render_template('hexicdecimal_temp.html', title = title, metaKeys = metaKeys,metaData =metaData)
 
+@app.route('/konwertuj_na_binarny') 
+def tekstNaBIN(): 
+    title = "Konwertuj tekst na binarny"
+    metaKeys = "Potrzebujasz zmienić tekst na binarny?"
+    metaData = "tekst na binarny,  system binarny"
+    return render_template('binaryToString_temp.html', title = title, metaKeys = metaKeys,metaData =metaData)
+
 @app.route('/przelicz_temperature') 
 def temperatureConverter(): 
-    title = "Przelicz temperaturę na różne skale - Kelvin, Celcjusz, Farenheit, Rankine"
-    metaKeys = "Potrzebujasz zamienić temperaturę na inną skalę - Farenheit, Kelvin, Celcjusz, Rankine?"
-    metaData = "konwerter temperatur, kalkulator temperatur, przelicznik temperatur, Kelvin, Rankine, Farenheit, Celcjusz"
+    title = "Przelicz temperaturę na różne skale - Kelvin, Celsjusz, Fahrenheit, Rankine"
+    metaKeys = "Potrzebujasz zamienić temperaturę na inną skalę - Fahrenheit, Kelvin, Celsjusz, Rankine?"
+    metaData = "konwerter temperatur, kalkulator temperatur, przelicznik temperatur, Kelvin, Rankine, Fahrenheit, Celsjusz"
     return render_template('temperature_temp.html', title = title, metaKeys = metaKeys,metaData =metaData)
 
 

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+<div class=" row text-center border border-top-0 ">
+
+    <div class="col"></div>
+    <div class="col-10">
+
+
+        <h1>Tekst na kod binarny</h1>
+        <br>
+        <div >
+            <img class="img-fluid" src="{{ url_for('static', filename= 'binarny_konwerter.png')}}" alt="konwersja binarny">
+        </div>
+        <br>
+        <div class="alert alert-secondary" role="alert">
+            Liczba binarna to liczba wyrażona w systemie liczbowym o podstawie 2 lub binarnym systemie liczbowym, metodzie wyrażenia matematycznego, która wykorzystuje tylko dwa symbole: zazwyczaj „0” (zero) i „1” (jeden).
+          </div>
+        <br>
+        <br>
+        <textarea rows="15" type="text" class="form-control"  id="textToBinaryStart" placeholder="wprowadź tekst" aria-label="Test" aria-describedby="basic-addon2" ></textarea>
+        <br>
+        <button type="button" class="btn btn-primary"  onclick="tekstNaBinarny()" >Konwertuj tekst</button>
+        <br>
+        <br>
+        <textarea rows="15" type="text" class="form-control"  id="textToBinaryEnd" placeholder="" aria-label="Test" aria-describedby="basic-addon2" ></textarea>
+        <br>
+        
+        
+        <br>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}
