@@ -68,14 +68,14 @@ def osobaTestowa():
 
 
 
-@app.route('/male_na_wielkie') 
+@app.route('/wielkie_na_male') 
 def maleNaWielkie(): 
     title = "Małe litery na wielkie, odwróć capslock"
     metaKeys = "Potrzebujasz zamienić tekst na wielkie litery (jak z właczonym Capslockiem)?"
     metaData = "małe na duże, wielkie litery, capslock, małe litery"
     return render_template('capslockOff_temp.html', title = title, metaKeys = metaKeys,metaData =metaData)
 
-@app.route('/wielkie_na_male') 
+@app.route('/male_na_wielkie') 
 def wielkieNaMale(): 
     title = "Wielkie litery na małe. włącz capslock"
     metaKeys = "Potrzebujasz zamienić tekst na małe litery (odwróć Capslock)?"
